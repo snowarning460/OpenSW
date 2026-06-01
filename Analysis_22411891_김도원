@@ -263,7 +263,7 @@ li { margin: 5px 0; }
 </head>
 <body>
 
-<h1>📅 일정 관리 시스템</h1>
+<h1>일정 관리 시스템</h1>
 
 <input type="text" id="title" placeholder="일정 제목">
 <input type="datetime-local" id="time">
@@ -325,7 +325,7 @@ function editSchedule(index) {
     }
 }
 
-// 🔔 알림 기능 (간단 버전)
+// 알림 기능 (간단 버전)
 setInterval(() => {
     let now = new Date().getTime();
 
@@ -333,7 +333,7 @@ setInterval(() => {
         let scheduleTime = new Date(s.time).getTime();
 
         if (!s.notified && scheduleTime <= now) {
-            alert("📢 일정 알림: " + s.title);
+            alert("일정 알림: " + s.title);
             s.notified = true;
             save();
         }
